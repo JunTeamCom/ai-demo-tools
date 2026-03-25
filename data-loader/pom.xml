@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.junteam.ai</groupId>
 	<artifactId>data-loader</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>5.0.0</version>
 	<name>data-loader</name>
 	<description/>
 	<url/>
