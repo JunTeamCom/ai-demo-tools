@@ -7,7 +7,7 @@ spring:
       api-key: ${DASHSCOPE_API_KEY}
       chat:
         options:
-            model: qwen3.5-plus
+            model: qwen3.6-plus
       embedding:  # 新增嵌入模型配置
         options:
           model: text-embedding-v2  # 阿里云支持的嵌入模型
