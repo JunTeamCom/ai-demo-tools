@@ -27,3 +27,6 @@ replay_pid*
 .vscode/
 .vs/
 .idea/
+
+# Temp file
+target/

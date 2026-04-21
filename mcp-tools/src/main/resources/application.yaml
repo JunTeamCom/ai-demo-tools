@@ -1,3 +1,14 @@
 spring:
   application:
     name: mcp-tools
+  ai:
+    openai:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode  # Qwen的OpenAI式Endpoint
+      api-key: ${DASHSCOPE_API_KEY}
+      chat:
+        options:
+            model: qwen3.5-plus
+      embedding:  # 新增嵌入模型配置
+        options:
+          model: text-embedding-v2  # 阿里云支持的嵌入模型
+
