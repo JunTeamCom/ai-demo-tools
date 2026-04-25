@@ -19,8 +19,9 @@ public class TimeController {
                 .build();
     }
 
+    @SuppressWarnings("null")
     @GetMapping(path = "/time", params = "city")
-    public String getTime(@RequestParam("city") String city) {
+    public String getTime(@RequestParam String city) {
         return chatClient.prompt()
                 .user(userSpec -> {
                     userSpec
