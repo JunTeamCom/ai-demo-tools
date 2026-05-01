@@ -13,22 +13,22 @@ public class TimeController {
     private final ChatClient chatClient;
 
     public TimeController(ChatClient.Builder chatClientBuilder,
-            TimeTools timeTools) {
+        TimeTools timeTools) {
         this.chatClient = chatClientBuilder
-                .defaultTools(timeTools)
-                .build();
+            .defaultTools(timeTools)
+            .build();
     }
 
     @SuppressWarnings("null")
     @GetMapping(path = "/time", params = "city")
     public String getTime(@RequestParam String city) {
         return chatClient.prompt()
-                .user(userSpec -> {
-                    userSpec
-                            .text(CURRENT_TIME_TEMPLATE)
-                            .param("city", city);
-                })
-                .call()
-                .content();
+            .user(userSpec -> {
+                userSpec
+                    .text(CURRENT_TIME_TEMPLATE)
+                    .param("city", city);
+            })
+            .call()
+            .content();
     }
 }
